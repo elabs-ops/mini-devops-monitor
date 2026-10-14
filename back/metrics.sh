@@ -1,11 +1,5 @@
 #!/bin/sh
 
-if [ ! -d "./data" ]; then
-	mkdir -p ./data
-else
-	echo "exist"
-fi
-
 CPU_LOAD=$(uptime | awk -F'load average:' '{print $2}' | sed 's/ //g')
 M1=$(echo "$CPU_LOAD" | cut -d',' -f1)
 M5=$(echo "$CPU_LOAD" | cut -d',' -f2)
