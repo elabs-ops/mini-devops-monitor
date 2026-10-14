@@ -8,7 +8,7 @@ M10=$(echo "$CPU_LOAD" | cut -d',' -f3)
 RAM_METRICS=$(free --mega | grep Mem)
 TOTAL_RAM=$(echo "$RAM_METRICS" | awk '{print $2}')
 USED_RAM=$(echo "$RAM_METRICS" | awk '{print $3}')
-RAM_RATIO=$(echo "$RAM_METRICS" | awk '{printf "%.2f", ($3/$2) * 100}')
+RAM_RATIO=$(echo "$RAM_METRICS" | awk '{printf "%.2f", ($3/$2) * 100}')%
 
 DISK_DATA=$(df -h / | tail -n 1)
 DISK_AVAIL=$(echo "$DISK_DATA" | awk '{print $4}')
