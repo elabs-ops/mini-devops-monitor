@@ -1,8 +1,10 @@
-import subprocess
 from flask import Flask, jsonify, redirect, Response
+from flask_cors import CORS
+import subprocess
 
 # 1. Création de l'application
 app = Flask(__name__)
+CORS(app)
 
 # 2. Définition d'une route HTTP
 @app.route('/')

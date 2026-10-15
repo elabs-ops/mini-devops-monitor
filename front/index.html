@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Metrics Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>System Metrics Dashboard</h1>
+  <main class="container">
+	  <section>
+	    <h2>System Info</h2>
+	    <p>Hostname: <span id="hostname">-</span></p>
+	  </section>
+
+	  <section>
+	    <h2>CPU Load Average</h2>
+	    <p>1 min: <span id="cpu-1m">-</span></p>
+	    <p>5 min: <span id="cpu-5m">-</span></p>
+	    <p>10 min: <span id="cpu-10m">-</span></p>
+	  </section>
+
+	  <section>
+	    <h2>RAM Memory</h2>
+	    <p>Used: <span id="ram-used">-</span> / <span id="ram-total">-</span> MB</p>
+	    <p>Usage: <span id="ram-pct">-</span></p>
+	  </section>
+
+	  <section>
+	    <h2>Disk Usage</h2>
+	    <p>Available: <span id="disk-available">-</span></p>
+	    <p>Usage: <span id="disk-pct">-</span></p>
+	  </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
